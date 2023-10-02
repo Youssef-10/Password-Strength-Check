@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Check</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="head">
+        <input type="password" id="password" placeholder="Create Password" />
+        <span class="show"></span>
+        <p class="paragraph">Your Password Is <span class="strength"></span></p>
+      </form>
+      <div class="main">
+        <p>Password Should be</p>
+        <ul>
+          <li><span class="dot"></span>At least 8 Characters Long</li>
+          <li><span class="dot"></span>At Least 1 Number(0...9)</li>
+          <li><span class="dot"></span>At Least 1 Lowercase Letter (a...z)</li>
+          <li><span class="dot"></span>At Least 1 Special Symbol (!...$)</li>
+          <li><span class="dot"></span>At Least 1 Uppercase Letter (A...Z)</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- The oninput event is similar to the onchange event. -->
+
+<!-- The difference is that the oninput event occurs immediately after the content has been changed,
+   while onchange occurs when the element loses focus. -->

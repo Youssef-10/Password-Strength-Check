@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: rgb(66, 132, 237);
+}
+.container {
+  background-color: white;
+  width: 360px;
+  height: 360px;
+  padding: 0 20px;
+  border-radius: 8px;
+}
+.head {
+  position: relative;
+}
+.head > span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.head > .paragraph {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  right: 5px;
+  padding: 3px;
+  display: none;
+  transition: 0.3s;
+}
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  margin-top: 30px;
+  height: 60px;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(66, 132, 237);
+  border-radius: 6px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  caret-color: rgb(66, 132, 237);
+  position: relative;
+}
+
+-webkit-input[type="password"]::placeholder,
+-webkit-input[type="text"]::placeholder {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.head > span.show,
+.head > span.hide {
+  position: relative;
+  transition: 0.3s;
+}
+.head > span.show::before {
+  content: "\f070";
+  position: absolute;
+  font-family: "font awesome 5 free";
+  font-weight: bold;
+  top: 0;
+  right: 0;
+}
+.head > span.hide::before {
+  content: "\f06e";
+  position: absolute;
+  font-family: "font awesome 5 free";
+  font-weight: bold;
+  right: 0;
+  top: 0;
+}
+.main {
+  font-size: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  position: relative;
+  padding-left: 30px;
+  transition: 0.3s;
+}
+ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+ul li > span {
+  transition: 0.3s;
+}
+ul li > .dot {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.315);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ul li > .check::before {
+  position: absolute;
+  content: "\f00c";
+  font-family: "font awesome 5 free";
+  font-weight: bold;
+  left: 0;
+  color: rgb(66, 132, 237);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+ul li.checked {
+  opacity: 0.5;
+}
